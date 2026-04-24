@@ -1,205 +1,259 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rota do Lucro - O Guia Definitivo para Motoristas de App</title>
-    <style>
-        :root {
-            --primary: #27ae60;
-            --secondary: #2ecc71;
-            --dark: #0b0d0f;
-            --text: #333;
-            --light: #f4f4f4;
-            --accent: #e74c3c;
-            --gold: #f1c40f;
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rota do Lucro - O Guia Definitivo para Motoristas de App</title>
+    <style>
+        :root {
+            --primary: #27ae60;
+            --secondary: #2ecc71;
+            --dark: #0b0d0f;
+            --text: #333;
+            --light: #f4f4f4;
+            --accent: #e74c3c;
+            --gold: #f1c40f;
+        }
 
-        body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: var(--text);
-            background-color: var(--dark);
-        }
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: var(--text);
+            background-color: var(--dark);
+        }
 
-        .container {
-            max-width: 800px;
-            margin: auto;
-            padding: 0 20px;
-        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 0 20px;
+        }
 
-        header {
-            padding: 50px 20px;
-            text-align: center;
-            color: white;
-            background: linear-gradient(180deg, #1a1a1a 0%, #0b0d0f 100%);
-        }
+        header {
+            padding: 50px 20px;
+            text-align: center;
+            color: white;
+            background: linear-gradient(180deg, #1a1a1a 0%, #0b0d0f 100%);
+        }
 
-        .headline {
-            font-size: 2.3rem;
-            font-weight: 900;
-            line-height: 1.1;
-            margin-bottom: 20px;
-            color: var(--gold);
-            text-transform: uppercase;
-        }
+        .headline {
+            font-size: 2.3rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: var(--gold);
+            text-transform: uppercase;
+        }
 
-        .subheadline {
-            font-size: 1.2rem;
-            color: #bdc3c7;
-            margin-bottom: 30px;
-        }
+        .subheadline {
+            font-size: 1.2rem;
+            color: #bdc3c7;
+            margin-bottom: 30px;
+        }
 
-        /* ESTILO PARA O VÍDEO RESPONSIVO */
-        .video-container {
-            position: relative;
-            padding-bottom: 177.77%; /* Proporção 9:16 (Vertical para Shorts) */
-            height: 0;
-            overflow: hidden;
-            max-width: 315px; /* Largura máxima para não ficar gigante no PC */
-            margin: 30px auto;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            border: 2px solid #333;
-        }
+        .mockup-container {
+            margin: 30px 0;
+        }
 
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
+        .mockup-img {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
 
-        .cta-button {
-            display: inline-block;
-            background: var(--primary);
-            color: white;
-            padding: 22px 45px;
-            font-size: 1.6rem;
-            text-decoration: none;
-            font-weight: 800;
-            border-radius: 10px;
-            margin: 20px 0;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 20px rgba(39, 174, 96, 0.4);
-            animation: pulse 1.5s infinite;
-            text-align: center;
-        }
+        .cta-button {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 22px 45px;
+            font-size: 1.6rem;
+            text-decoration: none;
+            font-weight: 800;
+            border-radius: 10px;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(39, 174, 96, 0.4);
+            animation: pulse 1.5s infinite;
+            text-align: center;
+        }
 
-        @keyframes pulse {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(39, 174, 96, 0.7); }
-            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(39, 174, 96, 0); }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(39, 174, 96, 0); }
-        }
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(39, 174, 96, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(39, 174, 96, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(39, 174, 96, 0); }
+        }
 
-        .section-white {
-            background: white;
-            padding: 60px 0;
-            border-radius: 40px 40px 0 0;
-            margin-top: -20px;
-        }
+        .cta-button:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
 
-        .benefit-card {
-            background: #f9f9f9;
-            padding: 25px;
-            border-radius: 15px;
-            margin-bottom: 20px;
-            border-left: 6px solid var(--primary);
-            text-align: left;
-        }
+        .section-white {
+            background: white;
+            padding: 60px 0;
+            border-radius: 40px 40px 0 0;
+            margin-top: -20px;
+        }
 
-        .pricing-section {
-            padding: 80px 0;
-            text-align: center;
-            background: var(--dark);
-            color: white;
-        }
+        .benefit-card {
+            background: #f9f9f9;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            border-left: 6px solid var(--primary);
+            text-align: left;
+        }
 
-        .price-box {
-            border: 2px solid var(--primary);
-            display: inline-block;
-            padding: 50px 30px;
-            border-radius: 30px;
-            background: #161a1d;
-        }
+        .pricing-section {
+            padding: 80px 0;
+            text-align: center;
+            background: var(--dark);
+            color: white;
+        }
 
-        .new-price {
-            font-size: 4.5rem;
-            font-weight: 900;
-            color: var(--secondary);
-            margin: 5px 0;
-        }
+        .price-box {
+            border: 2px solid var(--primary);
+            display: inline-block;
+            padding: 50px 30px;
+            border-radius: 30px;
+            background: #161a1d;
+            position: relative;
+        }
 
-        footer {
-            background: #000;
-            color: #555;
-            padding: 30px;
-            text-align: center;
-            font-size: 0.75rem;
-        }
-    </style>
+        .old-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 1.4rem;
+        }
+
+        .new-price {
+            font-size: 4.5rem;
+            font-weight: 900;
+            color: var(--secondary);
+            margin: 5px 0;
+        }
+
+        .price-anchor {
+            font-size: 1.1rem;
+            color: var(--gold);
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .guarantee-box {
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(46, 204, 113, 0.1);
+            border-radius: 15px;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            background: #000;
+            color: #555;
+            padding: 30px;
+            text-align: center;
+            font-size: 0.75rem;
+        }
+
+        ul {
+            text-align: left;
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li::before {
+            content: "✅";
+            margin-right: 10px;
+        }
+
+        ul li {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <p style="color: var(--secondary); font-weight: bold; letter-spacing: 2px;">ATENÇÃO MOTORISTA DE APP</p>
-            <h1 class="headline">Você trabalha para o Aplicativo ou o Aplicativo trabalha para você?</h1>
-            <p class="subheadline">Pare de ser escravo do combustível e da manutenção. Domine o método de 30 dias para organizar suas finanças e fazer o lucro sobrar no bolso.</p>
-            
-            <div class="video-container">
-                <iframe 
-                    src="https://www.youtube.com/embed/YoDArfBKDiE" 
-                    title="Vídeo de Venda Rota do Lucro" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    allowfullscreen>
-                </iframe>
-            </div>
+    <header>
+        <div class="container">
+            <p style="color: var(--secondary); font-weight: bold; letter-spacing: 2px;">ATENÇÃO MOTORISTA DE APP</p>
+            <h1 class="headline">Você trabalha para o Aplicativo ou o Aplicativo trabalha para você?</h1>
+            <p class="subheadline">Pare de ser escravo do combustível e da manutenção. Domine o método de 30 dias para organizar suas finanças e fazer o lucro sobrar no bolso.</p>
+            
+            <div class="mockup-container">
+                <img src="Rota-do-Lucro-Organize-Seu-Dinheiro-Rodando-com-Apps_GPT.png" alt="Ebook Rota do Lucro" class="mockup-img">
+            </div>
 
-            <a href="https://pay.kiwify.com.br/vZ7jL5k" class="cta-button">SIM! QUERO MEU LUCRO REAL</a>
-        </div>
-    </header>
+            <a href="https://pay.kiwify.com.br/vZ7jL5k" class="cta-button">SIM! QUERO MEU LUCRO REAL</a>
+        </div>
+    </header>
 
-    <section class="section-white">
-        <div class="container">
-            <h2 style="text-align: center; color: var(--dark); font-size: 2rem;">Os 3 Erros Que Te Mantêm Quebrado:</h2>
-            
-            <div class="benefit-card">
-                <h3>1. Misturar Ganhos e Despesas</h3>
-                <p>Usar o dinheiro da última corrida para pagar o almoço é o caminho mais rápido para o vermelho. Você nunca sabe quanto o carro custa de verdade.</p>
-            </div>
-            
-            <div class="benefit-card">
-                <h3>2. Ignorar a Reserva de Emergência</h3>
-                <p>O pneu furou? O carro quebrou? Se você entra em pânico nessas horas, é porque não tem um plano de contingência.</p>
-            </div>
+    <section class="section-white">
+        <div class="container">
+            <h2 style="text-align: center; color: var(--dark); font-size: 2rem;">Os 3 Erros Que Te Mantêm Quebrado:</h2>
+            
+            <div class="benefit-card">
+                <h3>1. Misturar Ganhos e Despesas</h3>
+                <p>Usar o dinheiro da última corrida para pagar o almoço é o caminho mais rápido para o vermelho. Você nunca sabe quanto o carro custa de verdade.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <h3>2. Ignorar a Reserva de Emergência</h3>
+                <p>O pneu furou? O carro quebrou? Se você entra em pânico nessas horas, é porque não tem um plano de contingência.</p>
+            </div>
 
-            <div class="benefit-card">
-                <h3>3. Confundir Faturamento com Lucro</h3>
-                <p>R$ 400,00 no app não é dinheiro no bolso. É preciso descontar a depreciação, o combustível e o seu futuro.</p>
-            </div>
-        </div>
-    </section>
+            <div class="benefit-card">
+                <h3>3. Confundir Faturamento com Lucro</h3>
+                <p>R$ 400,00 no app não é dinheiro no bolso. É preciso descontar a depreciação, o combustível e o seu futuro.</p>
+            </div>
 
-    <section class="pricing-section">
-        <div class="container">
-            <div class="price-box">
-                <p>INVISTA HOJE NO SEU FUTURO</p>
-                <div class="new-price">R$ 17,99</div>
-                <a href="https://pay.kiwify.com.br/vZ7jL5k" class="cta-button">GARANTIR ACESSO IMEDIATO</a>
-            </div>
-        </div>
-    </section>
+            <h2 style="text-align: center; margin-top: 50px;">O que você vai aprender no Ebook:</h2>
+            <ul>
+                <li><strong>Módulo 1 ao 3:</strong> Mentalidade e Separação de Contas (PF vs PJ).</li>
+                <li><strong>Módulo 4:</strong> Controle Diário Prático (em apenas 5 minutos).</li>
+                <li><strong>Módulo 7 e 8:</strong> Cortes inteligentes e Horários de Pico Lucrativos.</li>
+                <li><strong>Plano de 30 Dias:</strong> O passo a passo para sua Reserva de Emergência.</li>
+            </ul>
+        </div>
+    </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Manoel Adeilson - Todos os direitos reservados.</p>
-        </div>
-    </footer>
+    <section class="pricing-section">
+        <div class="container">
+            <div class="price-box">
+                <p>INVISTA HOJE NO SEU FUTURO</p>
+                <p class="old-price">De R$ 67,00 por apenas</p>
+                <div class="new-price">R$ 17,99</div>
+                <p class="price-anchor">"Mais barato que uma corrida de 15 minutos que você faz agora!"</p>
+                
+                <a href="https://pay.kiwify.com.br/vZ7jL5k" class="cta-button">GARANTIR ACESSO IMEDIATO</a>
+                
+                <div class="guarantee-box">
+                    <p>🔒 <strong>Garantia Total de 7 Dias</strong><br>
+                    Leia o guia, aplique o método. Se em uma semana você não organizar suas contas, eu devolvo 100% do seu dinheiro.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>ROTA DO LUCRO - Organização Financeira para Motoristas de Aplicativo.</p>
+            <p>Este site não é do Google ou Facebook. Os resultados dependem da aplicação do método ensinado.</p>
+            <p>&copy; 2026 Manoel Adeilson - Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
+"""
+
+# Salvar o arquivo
+file_path = "index.html"
+with open(file_path, "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+print(f"Página de vendas ajustada e completa gerada como: {file_path}")
+ 
