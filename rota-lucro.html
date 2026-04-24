@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -53,15 +52,25 @@
             margin-bottom: 30px;
         }
 
-        .mockup-container {
-            margin: 30px 0;
+        /* ESTILO PARA O VÍDEO RESPONSIVO */
+        .video-container {
+            position: relative;
+            padding-bottom: 177.77%; /* Proporção 9:16 (Vertical para Shorts) */
+            height: 0;
+            overflow: hidden;
+            max-width: 315px; /* Largura máxima para não ficar gigante no PC */
+            margin: 30px auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 2px solid #333;
         }
 
-        .mockup-img {
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            max-width: 450px;
-            border-radius: 15px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            height: 100%;
         }
 
         .cta-button {
@@ -84,11 +93,6 @@
             0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(39, 174, 96, 0.7); }
             70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(39, 174, 96, 0); }
             100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(39, 174, 96, 0); }
-        }
-
-        .cta-button:hover {
-            background: var(--secondary);
-            transform: translateY(-3px);
         }
 
         .section-white {
@@ -120,13 +124,6 @@
             padding: 50px 30px;
             border-radius: 30px;
             background: #161a1d;
-            position: relative;
-        }
-
-        .old-price {
-            text-decoration: line-through;
-            color: #999;
-            font-size: 1.4rem;
         }
 
         .new-price {
@@ -136,43 +133,12 @@
             margin: 5px 0;
         }
 
-        .price-anchor {
-            font-size: 1.1rem;
-            color: var(--gold);
-            font-style: italic;
-            margin-bottom: 20px;
-        }
-
-        .guarantee-box {
-            margin-top: 40px;
-            padding: 20px;
-            background: rgba(46, 204, 113, 0.1);
-            border-radius: 15px;
-            font-size: 0.9rem;
-        }
-
         footer {
             background: #000;
             color: #555;
             padding: 30px;
             text-align: center;
             font-size: 0.75rem;
-        }
-
-        ul {
-            text-align: left;
-            list-style: none;
-            padding: 0;
-        }
-
-        ul li::before {
-            content: "✅";
-            margin-right: 10px;
-        }
-
-        ul li {
-            margin-bottom: 15px;
-            font-size: 1.1rem;
         }
     </style>
 </head>
@@ -184,8 +150,14 @@
             <h1 class="headline">Você trabalha para o Aplicativo ou o Aplicativo trabalha para você?</h1>
             <p class="subheadline">Pare de ser escravo do combustível e da manutenção. Domine o método de 30 dias para organizar suas finanças e fazer o lucro sobrar no bolso.</p>
             
-            <div class="mockup-container">
-                <img src="Rota-do-Lucro-Organize-Seu-Dinheiro-Rodando-com-Apps_GPT.png" alt="Ebook Rota do Lucro" class="mockup-img">
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/YoDArfBKDiE" 
+                    title="Vídeo de Venda Rota do Lucro" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
             </div>
 
             <a href="https://pay.kiwify.com.br/vZ7jL5k" class="cta-button">SIM! QUERO MEU LUCRO REAL</a>
@@ -210,14 +182,6 @@
                 <h3>3. Confundir Faturamento com Lucro</h3>
                 <p>R$ 400,00 no app não é dinheiro no bolso. É preciso descontar a depreciação, o combustível e o seu futuro.</p>
             </div>
-
-            <h2 style="text-align: center; margin-top: 50px;">O que você vai aprender no Ebook:</h2>
-            <ul>
-                <li><strong>Módulo 1 ao 3:</strong> Mentalidade e Separação de Contas (PF vs PJ).</li>
-                <li><strong>Módulo 4:</strong> Controle Diário Prático (em apenas 5 minutos).</li>
-                <li><strong>Módulo 7 e 8:</strong> Cortes inteligentes e Horários de Pico Lucrativos.</li>
-                <li><strong>Plano de 30 Dias:</strong> O passo a passo para sua Reserva de Emergência.</li>
-            </ul>
         </div>
     </section>
 
@@ -225,35 +189,17 @@
         <div class="container">
             <div class="price-box">
                 <p>INVISTA HOJE NO SEU FUTURO</p>
-                <p class="old-price">De R$ 67,00 por apenas</p>
                 <div class="new-price">R$ 17,99</div>
-                <p class="price-anchor">"Mais barato que uma corrida de 15 minutos que você faz agora!"</p>
-                
                 <a href="https://pay.kiwify.com.br/vZ7jL5k" class="cta-button">GARANTIR ACESSO IMEDIATO</a>
-                
-                <div class="guarantee-box">
-                    <p>🔒 <strong>Garantia Total de 7 Dias</strong><br>
-                    Leia o guia, aplique o método. Se em uma semana você não organizar suas contas, eu devolvo 100% do seu dinheiro.</p>
-                </div>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>ROTA DO LUCRO - Organização Financeira para Motoristas de Aplicativo.</p>
-            <p>Este site não é do Google ou Facebook. Os resultados dependem da aplicação do método ensinado.</p>
             <p>&copy; 2026 Manoel Adeilson - Todos os direitos reservados.</p>
         </div>
     </footer>
 
 </body>
 </html>
-"""
-
-# Salvar o arquivo
-file_path = "index.html"
-with open(file_path, "w", encoding="utf-8") as f:
-    f.write(html_content)
-
-print(f"Página de vendas ajustada e completa gerada como: {file_path}")
